@@ -1,0 +1,72 @@
+{
+  "common": {
+    "navbar": {
+      "title": "アプリボックス"
+    },
+    "footer": {
+      "text": "© 2025 アプリボックス アンキット・ライクワール"
+    },
+    "hero": {
+      "title": "アプリボックスへようこそ",
+      "description": "こんにちは、ライクワールアンキットです。これは私のアプリボックスです。このウェブサイトは私の作品集であり、各プロジェクトのライブデモや詳細な説明を掲載しています。このサイトで私の制作物を簡単にご覧いただけるように作成しました。すべてのプロジェクトはVPS上にデプロイされており、すぐにお試しいただけます。ご訪問ありがとうございます。私が作るのを楽しんだのと同じくらい、あなたにも楽しんでいただければ幸いです！"
+    },
+    "heading": {
+      "title1": "NextJsプロジェクト",
+      "title2": "MERNプロジェクト"
+    }
+  },
+  "projectCards": {
+    "viewGithub": "GitHubで見る",
+    "viewDemo": "ライブデモ"
+  },
+  "projects": {
+    "noProjects": "もうすぐ公開されます",
+    "project1": {
+      "title": "ナーサリーマーケットプレイス",
+      "description": "認証、商品管理、ロールベースのアクセス制御を備えた園芸製品向けのMERNスタックEコマースプラットフォーム",
+      "tags": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Redux",
+        "TailwindCSS"
+      ]
+    },
+    "project2": {
+      "title": "コードボット",
+      "description": "MERNスタックとGEMINI APIで構築されたAI搭載のコーディングアシスタントアプリケーション。開発者にコードの提案と説明を提供します。",
+      "tags": [
+        "React",
+        "Node.js",
+        "Google API",
+        "Express",
+        "MongoDB",
+        "TailwindCSS"
+      ]
+    },
+    "project3": {
+      "title": "MERNブログ",
+      "description": "MERNスタックとGEMINI APIで構築されたAI搭載のコーディングアシスタントアプリケーション。開発者にコードの提案と説明を提供します。",
+      "tags": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Redux",
+        "TailwindCSS"
+      ]
+    },
+    "project4": {
+      "title": "通貨コンバーター",
+      "description": "リアルタイムの為替レートと使いやすいインターフェースを備えた通貨換算アプリケーション。",
+      "tags": [
+        "React",
+        "API Integration",
+        "Node.js",
+        "Express",
+        "TailwindCSS"
+      ]
+    }
+  }
+}

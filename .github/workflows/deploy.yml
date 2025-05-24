@@ -1,0 +1,30 @@
+name: Deploy Appurihako to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH access
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.APPURIHAKO_SSH }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.APPURIHAKO_VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to VPS via SSH
+        run: |
+          ssh ${{ secrets.APPURIHAKO_VPS_USER }}@${{ secrets.APPURIHAKO_VPS_HOST }} << 'EOF'
+            cd /var/www/apps/appurihako
+            git pull origin main
+            docker-compose down
+            docker-compose up --build -d
+          EOF

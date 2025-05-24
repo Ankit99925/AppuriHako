@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy to VPS via SSH
         run: |
-          ssh ${{ secrets.APPURIHAKO_VPS_USER }}@${{ secrets.APPURIHAKO_VPS_HOST }} << 'EOF'
+          ssh ${{ secrets.APPURIHAKO_USERNAME }}@${{ secrets.APPURIHAKO_VPS_HOST }} << 'EOF'
             cd /var/www/apps/appurihako
             git pull origin main
             docker-compose down

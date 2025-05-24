@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">{t('navbar.title')}</a>
+        <a className="btn btn-ghost text-lg md:text-xl whitespace-nowrap">{t('navbar.title')}</a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">

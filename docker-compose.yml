@@ -1,16 +1,12 @@
-version: '3.8'
-
 services:
   appurihako:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/ankit99925/appurihako:latest
     container_name: appurihako
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
       - NODE_ENV=production
-    restart: always
+    restart: unless-stopped
     networks:
       - app-network
 

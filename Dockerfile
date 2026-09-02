@@ -1,36 +1,28 @@
-# Use Node.js 20 as base image
-FROM node:20-alpine AS builder
-
-# Set working directory
+FROM node:20-alpine AS deps
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build the application
+ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
-# Production image
-FROM node:20-alpine
-
+FROM node:20-alpine AS runner
 WORKDIR /app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Copy built assets from the builder stage
-COPY --from=builder /app/next.config.ts ./
+RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
+
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/projectdata ./projectdata
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Expose the port the app runs on
+USER nextjs
 EXPOSE 3000
-
-# Command to run the application
-CMD ["npm", "start"]
+ENV PORT=3000 HOSTNAME=0.0.0.0
+CMD ["node", "server.js"]

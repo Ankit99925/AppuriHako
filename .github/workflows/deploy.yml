@@ -43,6 +43,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: false    # VM suspended pending appeal — re-enable after restore
     steps:
       - name: Pull and restart on VM
         uses: appleboy/ssh-action@v1.2.0

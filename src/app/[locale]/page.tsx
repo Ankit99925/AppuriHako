@@ -4,6 +4,7 @@ import Separator from "@/components/ui/separator";
 import { useTranslations } from "next-intl";
 import { projects } from "../../../projectdata/projects";
 
+
 export default function Home() {
   const commonT = useTranslations("common");
   const projectsT = useTranslations("projects");

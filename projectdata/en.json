@@ -4,15 +4,48 @@
       "title": "AppBox"
     },
     "hero": {
-      "title": "Welcome to AppBox",
-      "description": "Hi, I am Ankit Raikwar and this is my AppBox This website is a collection of my work, featuring live demos and detailed descriptions of each project.I created this site to make it easy for you to explore what I’ve built. All projects are deployed on VPS and ready for you to try out. Thank you for visiting—I hope you enjoy browsing through my creations as much as I enjoyed making them!"
+      "name": "Ankit Raikwar",
+      "title": "Infrastructure / Network Engineer",
+      "body": "Based in Tokyo. After working in server operations and application support, I now focus on infrastructure and network engineering.\n\nI run a home lab for network build and configuration, and operate my own web applications on Google Cloud — learning the full path from design to operations. I work in both Japanese and English.",
+      "badges": [
+        "CCNA (July 2026)",
+        "JLPT N2",
+        "TOEIC 935",
+        "Tokyo"
+      ]
     },
-    "heading": {
-      "title1": "NextJs Projects",
-      "title2": "MERN Projects"
+    "projects": {
+      "title": "Projects",
+      "intro": "Applications I built and operate myself, from development through to deployment on Google Cloud."
     },
     "footer": {
-      "text": "© 2025 AppBox By Ankit Raikwar"
+      "text": "© 2026 AppBox By Ankit Raikwar"
+    }
+  },
+  "infrastructure": {
+    "heading": "Infrastructure",
+    "homelab": {
+      "title": "Home Lab",
+      "body": "OPNsense running on KVM/QEMU under Ubuntu, with server and client networks segmented.\nFirewall rules, NAT, DHCP and network segmentation configured and maintained."
+    },
+    "cloud": {
+      "title": "Cloud Operations (Google Cloud)",
+      "intro": "This site runs on Google Cloud Compute Engine.",
+      "items": [
+        "Infrastructure defined in Terraform",
+        "Runs as a Docker container, built and deployed by GitHub Actions",
+        "Nginx reverse proxy with Let's Encrypt HTTPS",
+        "CPU, uptime and external availability monitoring"
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        "Server operations and incident response (UNIX / Windows)",
+        "Application support, log analysis, incident management",
+        "Test automation and CI/CD environment setup",
+        "Japanese–English interpreting in meetings"
+      ]
     }
   },
   "projectCards": {
@@ -20,7 +53,6 @@
     "viewDemo": "Live Demo"
   },
   "projects": {
-    "noProjects": "Coming Soon",
     "project1": {
       "title": "Nursery Marketplace",
       "description": "A MERN stack e-commerce platform for nursery products with authentication, product management, and role-based access control",
@@ -30,38 +62,6 @@
         "MongoDB",
         "Express",
         "Redux"
-      ]
-    },
-    "project2": {
-      "title": "CodeBot",
-      "description": "A MERN stack code editor with real-time collaboration and syntax highlighting",
-      "tags": [
-        "React",
-        "Node.js",
-        "Google API",
-        "Express",
-        "MongoDB"
-      ]
-    },
-    "project3": {
-      "title": "MERN Blog",
-      "description": "A MERN stack blog with authentication, post management, and comment functionality",
-      "tags": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "Redux"
-      ]
-    },
-    "project4": {
-      "title": "Currency Converter",
-      "description": "A MERN stack currency converter with real-time exchange rate updates",
-      "tags": [
-        "React",
-        "API Integration",
-        "Node.js",
-        "Express"
       ]
     }
   }

@@ -4,15 +4,48 @@
       "title": "アプリボックス"
     },
     "footer": {
-      "text": "© 2025 アプリボックス ・ライクワルアンキット"
+      "text": "© 2026 アプリボックス ・ライクワルアンキット"
     },
     "hero": {
-      "title": "アプリボックスへようこそ",
-      "description": "こんにちは、ライクワルアンキットです。これは私のアプリボックスです。このウェブサイトは私の作品集であり、各プロジェクトのライブデモや詳細な説明を掲載しています。このサイトで私の制作物を簡単にご覧いただけるように作成しました。すべてのプロジェクトはVPS上にデプロイされており、すぐにお試しいただけます。ご訪問ありがとうございます。私が作るのを楽しんだのと同じくらい、あなたにも楽しんでいただければ幸いです！"
+      "name": "アンキット・ライクワル",
+      "title": "インフラ・ネットワークエンジニア",
+      "body": "東京在住。サーバー運用とアプリケーションサポートの実務経験を経て、現在はインフラ・ネットワーク分野に注力しています。\n\n自宅ラボでのネットワーク構築と、Google Cloud 上での自作アプリの運用を通じて、設計から運用までを一貫して学んでいます。日本語と英語の両方で業務を行うことができます。",
+      "badges": [
+        "CCNA（2026年7月取得）",
+        "JLPT N2",
+        "TOEIC 935",
+        "東京"
+      ]
     },
-    "heading": {
-      "title1": "NextJsプロジェクト",
-      "title2": "MERNプロジェクト"
+    "projects": {
+      "title": "プロジェクト",
+      "intro": "開発から Google Cloud 上での運用まで、一貫して自分で行っているアプリケーションです。"
+    }
+  },
+  "infrastructure": {
+    "heading": "インフラ",
+    "homelab": {
+      "title": "自宅ラボ",
+      "body": "Ubuntu の KVM/QEMU 上に OPNsense を構築し、サーバーとクライアントのネットワークを分離。\nファイアウォールルール、NAT、DHCP、ネットワークセグメンテーションを設定・運用しています。"
+    },
+    "cloud": {
+      "title": "クラウド運用（Google Cloud）",
+      "intro": "このサイトは Google Cloud の Compute Engine 上で稼働しています。",
+      "items": [
+        "インフラは Terraform でコード管理",
+        "Docker コンテナとして動作し、GitHub Actions で自動ビルド・デプロイ",
+        "Nginx をリバースプロキシとして使用、Let's Encrypt で HTTPS 化",
+        "CPU 使用率・稼働状況・外部からの死活監視を設定"
+      ]
+    },
+    "experience": {
+      "title": "これまでの経験",
+      "items": [
+        "サーバー運用・障害対応（UNIX / Windows）",
+        "アプリケーションサポート、ログ調査、インシデント管理",
+        "テスト自動化、CI/CD 環境の構築",
+        "会議での日英通訳"
+      ]
     }
   },
   "projectCards": {
@@ -20,7 +53,6 @@
     "viewDemo": "ライブデモ"
   },
   "projects": {
-    "noProjects": "もうすぐ公開されます",
     "project1": {
       "title": "ナーサリーマーケットプレイス",
       "description": "認証、商品管理、ロールベースのアクセス制御を備えた園芸製品向けのMERNスタックEコマースプラットフォーム",
@@ -30,41 +62,6 @@
         "MongoDB",
         "Express",
         "Redux",
-        "TailwindCSS"
-      ]
-    },
-    "project2": {
-      "title": "コードボット",
-      "description": "MERNスタックとGEMINI APIで構築されたAI搭載のコーディングアシスタントアプリケーション。開発者にコードの提案と説明を提供します。",
-      "tags": [
-        "React",
-        "Node.js",
-        "Google API",
-        "Express",
-        "MongoDB",
-        "TailwindCSS"
-      ]
-    },
-    "project3": {
-      "title": "MERNブログ",
-      "description": "MERNスタックとGEMINI APIで構築されたAI搭載のコーディングアシスタントアプリケーション。開発者にコードの提案と説明を提供します。",
-      "tags": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "Redux",
-        "TailwindCSS"
-      ]
-    },
-    "project4": {
-      "title": "通貨コンバーター",
-      "description": "リアルタイムの為替レートと使いやすいインターフェースを備えた通貨換算アプリケーション。",
-      "tags": [
-        "React",
-        "API Integration",
-        "Node.js",
-        "Express",
         "TailwindCSS"
       ]
     }

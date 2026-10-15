@@ -53,7 +53,8 @@ jobs:
           script: |
             set -e
             cd ~/AppuriHako
-            git pull origin main
+            git fetch --prune origin
+            git reset --hard origin/main
             docker compose pull
             docker compose up -d
             docker image prune -f
